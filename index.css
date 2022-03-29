@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/9199/animal-zoo-green-predator.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* banner info  */
+.main .info {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.main .info .heading {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 10px 0;
+  font-size: 3.8rem;
+  left: 1%;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .info .heading span {
+  background: #017bf5;
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-shadow: none;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.main .info .btns {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+}
+.main .info .btns button {
+  position: relative;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+  ]font-weight: normal;
+  transition: 0.3s linear;
+}
+.main .info .btns button:first-child,
+.main .info .btns button:hover {
+  color: #000;
+  background: #fff;
+}
+
+/* modal box  */
+.main #modalBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s linear;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.main #modalBox .modal {
+  position: relative;
+  bottom: -60px;
+  z-index: 5;
+  background: white;
+  opacity: 0.7
+  height: 40%;
+  width: 40%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.main #modalBox .modal i {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+}
+.main #modalBox .modal i:hover {
+  color: #000;
+}
+.main #modalBox .modal h1 {
+  font-size: 2.5rem;
+  margin-top: 5%;
+}
+.main #modalBox .modal ul {
+  position: relative;
+  height: auto;
+  width: 100%;
+  flex: 1;
+  text-align: center;
+  margin-top: 10%;
+}
+.main #modalBox .modal ul li {
+  list-style-type: none;
+  background: black;
+  color: white;
+  padding: 10px;
+  margin: 1% 0;
+}

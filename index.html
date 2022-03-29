@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snack For Snake</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="info">
+        <h1 class="heading">SNACK FOR SNAKE <span>Game</span></h1>
+        <div class="btns">
+          <button onclick="location.href='play.html';" id="play">PLAY</button>
+          <button onclick="openfunction()" id="how">HOW TO PLAY?</button>
+        </div>
+      </div>
+      <div id="modalBox">
+        <div class="modal">
+          <i class="fa fa-window-close" onclick="closefunction()"></i>
+          <h1>HOW TO PLAY?</h1>
+          <div>
+            <ul>
+              <li>Use arrow keys to move the snake</li>
+              <li>Press P to Pause the game</li>
+              <li>Press R to Resume the game</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function openfunction() {
+        document.getElementById('modalBox').style.display = 'flex';
+      }
+
+      function closefunction() {
+        document.getElementById('modalBox').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>

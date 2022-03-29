@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snack For Snake</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        background: black;
+        overflow: hidden;
+      }
+      canvas {
+         
+		 border: 10px solid transparent;
+		  padding: 15px;
+          border-image-source: url(border.png);
+          border-image-outset:60px;
+		  border-image-repeat: round;
+          border-image-slice: 640;
+		    border-image-width: 80px;    
+
+        position: relative;
+        bottom: -1px;
+        left: -100px;
+		
+      }
+      #score {
+        color: white;
+        font-family: comic sans MS;
+        font-size: 35px;
+      }
+
+      #open {
+        font-size: 25px;
+        outline: none;
+        position: relative;
+        float: right;
+        cursor: pointer;
+        left: -300px;
+        top: -65px;
+      }
+
+    #htp{
+      padding: 5px 20px;
+      background-color: #FCAC52;
+      float: left;
+      font-family: comic sans MS;
+      border-radius: 50px;
+      position: relative;
+      top:-380px;
+      right: -410px;
+      display: none;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <br />
+    <h1 id="score" align="center">Score: 0</h1>
+    <button onclick="openfunction()" id="open">
+      <i class="fa fa-question"></i>
+    </button>
+    <div
+      style="
+        color: white;
+        font-family: comic sans MS;
+        font-size: 30px;
+        float: left;
+        position: relative;
+        right: -100px;
+        top: -10px;
+      "
+    >
+      <h1>
+        <em
+          >SNACK<br />
+          <center>FOR</center>
+          SNAKE</em
+        >
+      </h1>
+      <div align="center">
+        <img
+          src="snake.jpg"
+          style="width: 150px; height: 150px; position: relative; top: -30px;"
+        />
+      </div>
+    </div>
+
+    <center><canvas id="canvas" width="500" height="500" id="game"></canvas></center>
+
+   <div id="htp">
+      <button onclick="closefunction()" style="float: right; border: none; padding:0px; font-size: 30px; background-color: #FCAC52;outline: none; cursor: pointer; position: relative; left: -10px; bottom: -5px;"><i class="fa fa-window-close"></i></button>
+      <div><h1 align="center" style="font-size: 35px;">HOW TO PLAY?</h1></div>
+      <div>
+        <ul type="square" style="font-size: 30px;">
+          <li>Use arrow keys to move the snake</li>
+          <li>Press P to Pause the game</li>
+          <li>Press R to Resume the game</li>
+        </ul>
+      </div>
+    </div>
+<script>
+    function openfunction() {
+        document.getElementById("htp").style.display = "block";
+    }
+
+    function closefunction() {
+      document.getElementById("htp").style.display = "none";
+    }
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
